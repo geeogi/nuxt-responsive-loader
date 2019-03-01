@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom options, with Sharp responsive srcset reflects custom options 1`] = `
+"<!doctype html>
+<html data-n-head-ssr data-n-head=\\"\\">
+  <head data-n-head=\\"\\">
+    <title data-n-head=\\"true\\"></title><style data-vue-ssr-id=\\"17cfdfa9:0\\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
+  </head>
+  <body data-n-head=\\"\\">
+    <div data-server-rendered=\\"true\\" id=\\"__nuxt\\"><!----><div id=\\"__layout\\"><img srcset=\\"/_nuxt/img/hello-world-200.png 200w,/_nuxt/img/hello-world-500.png 500w\\"></div></div><script>window.__NUXT__={layout:\\"default\\",data:[{}],error:null,serverRendered:true};</script><script src=\\"/_nuxt/runtime.js\\" defer></script><script src=\\"/_nuxt/pages/index.js\\" defer></script><script src=\\"/_nuxt/commons.app.js\\" defer></script><script src=\\"/_nuxt/app.js\\" defer></script>
+  </body>
+</html>
+"
+`;
+
+exports[`Default options HTML uses responsive srcset 1`] = `
+"<!doctype html>
+<html data-n-head-ssr data-n-head=\\"\\">
+  <head data-n-head=\\"\\">
+    <title data-n-head=\\"true\\"></title><style data-vue-ssr-id=\\"17cfdfa9:0\\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
+  </head>
+  <body data-n-head=\\"\\">
+    <div data-server-rendered=\\"true\\" id=\\"__nuxt\\"><!----><div id=\\"__layout\\"><img srcset=\\"/_nuxt/img/2b88a85-640.jpg 640w,/_nuxt/img/1fff45c-750.jpg 750w,/_nuxt/img/6717911-860.jpg 860w,/_nuxt/img/f9f19bf-970.jpg 970w,/_nuxt/img/c0ceb80-1080.jpg 1080w\\"></div></div><script>window.__NUXT__={layout:\\"default\\",data:[{}],error:null,serverRendered:true};</script><script src=\\"/_nuxt/runtime.js\\" defer></script><script src=\\"/_nuxt/pages/index.js\\" defer></script><script src=\\"/_nuxt/commons.app.js\\" defer></script><script src=\\"/_nuxt/app.js\\" defer></script>
+  </body>
+</html>
+"
+`;
+
+exports[`Default options build files contain srcset (.nuxt) 1`] = `
+Array [
+  "../.nuxt/components",
+  "../.nuxt/components/nuxt-error.vue",
+  "../.nuxt/components/nuxt-loading.vue",
+  "../.nuxt/dist",
+  "../.nuxt/dist/client",
+  "../.nuxt/dist/client/LICENSES",
+  "../.nuxt/dist/client/img",
+  "../.nuxt/dist/client/img/1fff45c-750.jpg",
+  "../.nuxt/dist/client/img/2b88a85-640.jpg",
+  "../.nuxt/dist/client/img/6717911-860.jpg",
+  "../.nuxt/dist/client/img/c0ceb80-1080.jpg",
+  "../.nuxt/dist/client/img/f9f19bf-970.jpg",
+  "../.nuxt/dist/client/pages",
+  "../.nuxt/dist/server",
+  "../.nuxt/dist/server/index.spa.html",
+  "../.nuxt/dist/server/index.ssr.html",
+  "../.nuxt/dist/server/pages",
+  "../.nuxt/layouts",
+  "../.nuxt/layouts/default.vue",
+  "../.nuxt/loading.html",
+  "../.nuxt/views",
+  "../.nuxt/views/app.template.html",
+  "../.nuxt/views/error.html",
+]
+`;
+
+exports[`Default options generated files contain srcset (dist) 1`] = `
+Array [
+  "../dist/.nojekyll",
+  "../dist/200.html",
+  "../dist/_nuxt",
+  "../dist/_nuxt/LICENSES",
+  "../dist/_nuxt/img",
+  "../dist/_nuxt/img/1fff45c-750.jpg",
+  "../dist/_nuxt/img/2b88a85-640.jpg",
+  "../dist/_nuxt/img/6717911-860.jpg",
+  "../dist/_nuxt/img/c0ceb80-1080.jpg",
+  "../dist/_nuxt/img/f9f19bf-970.jpg",
+  "../dist/_nuxt/pages",
+  "../dist/index.html",
+]
+`;
