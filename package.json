@@ -1,7 +1,7 @@
 {
   "name": "nuxt-responsive-loader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nuxt.js module for responsive loading",
   "license": "MIT",
   "contributors": [
     {
@@ -11,9 +11,6 @@
   "main": "lib/module.js",
   "repository": {
     "type": "git",
-    "url": "..."
-  },
-  "bugs": {
     "url": "..."
   },
   "publishConfig": {
