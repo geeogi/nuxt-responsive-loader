@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  loading: false,
+  loading: false
 }
 </script>

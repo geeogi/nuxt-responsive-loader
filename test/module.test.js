@@ -31,7 +31,9 @@ describe('Default options', () => {
   })
 
   test('generated files contain srcset (dist)', () => {
-    const generateFiles = klawSync(nuxt.options.generate.dir).map(getRelativePath)
+    const generateFiles = klawSync(nuxt.options.generate.dir).map(
+      getRelativePath
+    )
     expect(generateFiles).toContain('../dist/_nuxt/img/2b88a85-640.jpg')
     expect(generateFiles).toContain('../dist/_nuxt/img/1fff45c-750.jpg')
     expect(generateFiles).toContain('../dist/_nuxt/img/6717911-860.jpg')
@@ -42,15 +44,17 @@ describe('Default options', () => {
 
   test('HTML uses responsive srcset', async () => {
     const { html } = await nuxt.renderRoute('/')
-    expect(html).toContain([
-      '<img srcset="',
-      '/_nuxt/img/2b88a85-640.jpg 640w,',
-      '/_nuxt/img/1fff45c-750.jpg 750w,',
-      '/_nuxt/img/6717911-860.jpg 860w,',
-      '/_nuxt/img/f9f19bf-970.jpg 970w,',
-      '/_nuxt/img/c0ceb80-1080.jpg 1080w',
-      '">'
-    ].join(''))
+    expect(html).toContain(
+      [
+        '<img srcset="',
+        '/_nuxt/img/2b88a85-640.jpg 640w,',
+        '/_nuxt/img/1fff45c-750.jpg 750w,',
+        '/_nuxt/img/6717911-860.jpg 860w,',
+        '/_nuxt/img/f9f19bf-970.jpg 970w,',
+        '/_nuxt/img/c0ceb80-1080.jpg 1080w',
+        '">'
+      ].join('')
+    )
     expect(html).toMatchSnapshot()
   })
 
@@ -74,12 +78,14 @@ describe('Custom options, with Sharp', () => {
   test('responsive srcset reflects custom options', async () => {
     expect(nuxt.renderer).toBeDefined()
     const { html } = await nuxt.renderRoute('/')
-    expect(html).toContain([
-      '<img srcset="',
-      '/_nuxt/img/hello-world-200.png 200w,',
-      '/_nuxt/img/hello-world-500.png 500w',
-      '">'
-    ].join(''))
+    expect(html).toContain(
+      [
+        '<img srcset="',
+        '/_nuxt/img/hello-world-200.png 200w,',
+        '/_nuxt/img/hello-world-500.png 500w',
+        '">'
+      ].join('')
+    )
     expect(html).toMatchSnapshot()
     await nuxt.close()
   })

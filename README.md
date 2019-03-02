@@ -1,13 +1,13 @@
 # Nuxt Responsive Loader
 
-Warning: This my first ever NPM module. 
+Warning: This my first ever NPM module.
 Credit: This repo is based on Alex Lichter's SVG loader module.
 
 ## Features
 
-* Generate responsive srcsets for your nuxt image assets 
-* Your website will request the images that match the current screen size
-* Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
+- Generate responsive srcsets for your nuxt image assets
+- Your website will request the images that match the current screen size
+- Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
 
 ## Setup
 
@@ -16,9 +16,7 @@ Credit: This repo is based on Alex Lichter's SVG loader module.
 
 ```js
 {
-  modules: [
-    'nuxt-responsive-loader',
-  ]
+  modules: ['nuxt-responsive-loader']
 }
 ```
 
@@ -30,17 +28,17 @@ Credit: This repo is based on Alex Lichter's SVG loader module.
 </template>
 ```
 
-Which will produce this HTML:  
+Which will produce this HTML:
 
 ```
 <img srcset="'/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
-```      
+```
 
 ## Configuration
 
-The plugin will work seamlessly out of the box. 
+The plugin will work seamlessly out of the box.
 
-If you want to configure the underlying loader, you can do that easily as well. 
+If you want to configure the underlying loader, you can do that easily as well.
 For example, you might want to use [Sharp](https://github.com/lovell/sharp/) for lightening fast build times.
 (All options available [here](https://github.com/herrstucki/responsive-loader))
 
