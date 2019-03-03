@@ -12,7 +12,7 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 ## Features
 
 - Generate responsive srcsets for your Nuxt.js image assets
-- Your website will request the images that match the current screen size
+- Re-size, compress, convert format, rename and generate placeholders
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
 - Fully configurable
 
