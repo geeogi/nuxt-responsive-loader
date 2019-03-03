@@ -11,9 +11,10 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 
 ## Features
 
-- Generate responsive srcsets for your Nuxt.js image assets
-- Re-size, compress, convert format, rename and generate placeholders
+- Generate responsive srcsets for your Nuxt.js projects
+- Re-size images, compress, convert format, rename and generate placeholders
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
+- Uses [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
 - Fully configurable
 
 ## Setup
@@ -39,32 +40,31 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 This HTML will be the rendered:
 
 ```
-<img srcset="'/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
+<img srcset="/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
 ```
 
-- Now the browser will only request the image which matches the current screen size
+- The browser will only request the image which matches the current screen size
 - Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
 
 (Tip: if you're using the [nuxt-svg-loader](https://www.npmjs.com/package/nuxt-svg-loader) module, make sure to place it _before_ the nuxt-responsive-loader in the `modules` section of `nuxt.config.js`)
 
 ## Configuration
 
-The plugin will work seamlessly out of the box with these default settings:
+The plugin will work seamlessly out of the box and will use these settings:
 
 ```js
-
-  {
-    name: 'img/[hash:7]-[width].[ext]'
-    min: 640 // minimum image width
-    max: 1080 // maximum image width
-    steps: 5 // five sizes per image will be generated
-    placeholder: false // no placeholder will be generated
-    quality: 65 // images are compressed with medium quality
-  }
-
+{
+  name: 'img/[hash:7]-[width].[ext]'
+  min: 640 // minimum image width generated
+  max: 1080 // maximum image width generated
+  steps: 5 // five sizes per image will be generated
+  placeholder: false // no placeholder will be generated
+  quality: 65 // images are compressed with medium quality
+  adapter: require('responsive-loader/sharp')
+}
 ```
 
-If you want to configure the underlying loader, you can do that easily as well. For example, you might want to use [Sharp](https://github.com/lovell/sharp/) for faster bulk processing. (All options available [here](https://github.com/herrstucki/responsive-loader))
+If you want to configure the underlying loader, you can do that easily as well. (All options available [here](https://github.com/herrstucki/responsive-loader))
 
 ```js
 // file: nuxt.config.js
@@ -76,7 +76,7 @@ export default {
     name: 'img/hello-world-[width].[ext]',
     sizes: [200, 500],
     format: 'png',
-    adapter: require('responsive-loader/sharp'),
+    adapter: require('responsive-loader/sharp'), // Recommended. Alternatively, leave adapter undefined and add JIMP to your project.
     placeholder: true
   }
 }
