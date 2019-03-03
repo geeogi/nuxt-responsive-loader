@@ -2,7 +2,7 @@
 
 Warning: This is my first ever NPM module.
 
-Credit: This repo is based on [@maniL](https://github.com/manniL)'s Nuxt SVG loader [repo](https://www.npmjs.com/package/nuxt-svg-loader).
+Credit: This repo is based on [@manniL](https://github.com/manniL)'s Nuxt SVG loader [repo](https://www.npmjs.com/package/nuxt-svg-loader).
 
 ## Features
 
