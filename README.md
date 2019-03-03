@@ -1,6 +1,6 @@
 # Nuxt Responsive Loader
 
-Notice: This is my first ever NPM module.
+Notice: This is my first ever NPM module. Simple but true.
 
 Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader) repo.
 
