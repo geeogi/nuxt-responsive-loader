@@ -3,6 +3,10 @@
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-responsive-loader/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 [![npm](https://img.shields.io/npm/dt/nuxt-responsive-loader.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 
+>
+
+[📖 **Release Notes**](./CHANGELOG.md)
+
 Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader).
 
 ## Features
@@ -85,3 +89,5 @@ export default {
 - Start development server using `npm run dev`
 
 ## License
+
+MIT
