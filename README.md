@@ -71,13 +71,77 @@ If you want to configure the underlying loader, you can do that easily as well. 
 
 export default {
   // ...
-  // Your loader options as responsiveLoader object
+  // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/hello-world-[width].[ext]',
     sizes: [200, 500],
     format: 'png',
     adapter: require('responsive-loader/sharp'), // Recommended. Alternatively, leave adapter undefined and add JIMP to your project.
     placeholder: true
+  }
+}
+```
+
+## Examples
+
+- Compressing images to reduce file size:
+
+```js
+// file: nuxt.config.js
+
+export default {
+  // ...
+  // Specify your options as a responsiveLoader object
+  responsiveLoader: {
+    name: 'img/[hash:7]-[width].[ext]',
+    adapter: require('responsive-loader/sharp'),
+    quality: 65
+  }
+}
+```
+
+```html
+<!-- file: index.vue -->
+<template>
+  <img :src="require('~/assets/nuxt.jpg').src" />
+</template>
+```
+
+- Generating placeholders for usage with blur-up technique:
+
+```js
+// file: nuxt.config.js
+
+export default {
+  // ...
+  // Specify your options as a responsiveLoader object
+  responsiveLoader: {
+    name: 'img/[hash:7]-[width].[ext]',
+    adapter: require('responsive-loader/sharp'),
+    placeholder: true
+  }
+}
+```
+
+```html
+<!-- file: index.vue -->
+<template>
+  <img :src="require('~/assets/nuxt.jpg').placeholder" data-src="..." />
+</template>
+```
+
+- Converting image files to `.png`:
+
+```js
+// file: nuxt.config.js
+
+export default {
+  // ...
+  // Specify your options as a responsiveLoader object
+  responsiveLoader: {
+    name: 'img/[hash:7]-[width].[ext]',
+    format: 'png',
+    adapter: require('responsive-loader/sharp')
   }
 }
 ```
