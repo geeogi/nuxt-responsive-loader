@@ -16,7 +16,6 @@ module.exports = {
   responsiveLoader: {
     name: 'img/hello-world-[width].[ext]',
     sizes: [200, 500],
-    format: 'png',
-    adapter: require('responsive-loader/sharp')
+    format: 'png'
   }
 }

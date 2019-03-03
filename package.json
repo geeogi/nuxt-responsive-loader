@@ -41,9 +41,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "consola": "^2.3.2",
-    "jimp": "^0.6.0",
-    "responsive-loader": "^1.2.0"
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.21.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
@@ -58,10 +57,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.1.0",
     "jest": "^23.6.0",
-    "jsdom": "^13.1.0",
+    "jimp": "^0.6.0",
     "klaw-sync": "^6.0.0",
     "nuxt-edge": "^2.5.0-25850891.8ea0f868",
-    "prettier": "^1.16.4",
-    "sharp": "^0.21.3"
+    "prettier": "^1.16.4"
   }
 }

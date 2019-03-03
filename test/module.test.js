@@ -22,11 +22,11 @@ describe('Default options', () => {
 
   test('build files contain srcset (.nuxt)', () => {
     const buildFiles = klawSync(nuxt.options.buildDir).map(getRelativePath)
-    expect(buildFiles).toContain('../.nuxt/dist/client/img/2b88a85-640.jpg')
-    expect(buildFiles).toContain('../.nuxt/dist/client/img/1fff45c-750.jpg')
-    expect(buildFiles).toContain('../.nuxt/dist/client/img/6717911-860.jpg')
-    expect(buildFiles).toContain('../.nuxt/dist/client/img/f9f19bf-970.jpg')
-    expect(buildFiles).toContain('../.nuxt/dist/client/img/c0ceb80-1080.jpg')
+    expect(buildFiles).toContain('../.nuxt/dist/client/img/f04fe61-640.jpg')
+    expect(buildFiles).toContain('../.nuxt/dist/client/img/04676df-750.jpg')
+    expect(buildFiles).toContain('../.nuxt/dist/client/img/5f9177e-860.jpg')
+    expect(buildFiles).toContain('../.nuxt/dist/client/img/b7fb524-970.jpg')
+    expect(buildFiles).toContain('../.nuxt/dist/client/img/de5f3f2-1080.jpg')
     expect(buildFiles.filter(noJS)).toMatchSnapshot()
   })
 
@@ -34,11 +34,11 @@ describe('Default options', () => {
     const generateFiles = klawSync(nuxt.options.generate.dir).map(
       getRelativePath
     )
-    expect(generateFiles).toContain('../dist/_nuxt/img/2b88a85-640.jpg')
-    expect(generateFiles).toContain('../dist/_nuxt/img/1fff45c-750.jpg')
-    expect(generateFiles).toContain('../dist/_nuxt/img/6717911-860.jpg')
-    expect(generateFiles).toContain('../dist/_nuxt/img/f9f19bf-970.jpg')
-    expect(generateFiles).toContain('../dist/_nuxt/img/c0ceb80-1080.jpg')
+    expect(generateFiles).toContain('../dist/_nuxt/img/f04fe61-640.jpg')
+    expect(generateFiles).toContain('../dist/_nuxt/img/04676df-750.jpg')
+    expect(generateFiles).toContain('../dist/_nuxt/img/5f9177e-860.jpg')
+    expect(generateFiles).toContain('../dist/_nuxt/img/b7fb524-970.jpg')
+    expect(generateFiles).toContain('../dist/_nuxt/img/de5f3f2-1080.jpg')
     expect(generateFiles.filter(noJS)).toMatchSnapshot()
   })
 
@@ -47,11 +47,11 @@ describe('Default options', () => {
     expect(html).toContain(
       [
         '<img srcset="',
-        '/_nuxt/img/2b88a85-640.jpg 640w,',
-        '/_nuxt/img/1fff45c-750.jpg 750w,',
-        '/_nuxt/img/6717911-860.jpg 860w,',
-        '/_nuxt/img/f9f19bf-970.jpg 970w,',
-        '/_nuxt/img/c0ceb80-1080.jpg 1080w',
+        '/_nuxt/img/f04fe61-640.jpg 640w,',
+        '/_nuxt/img/04676df-750.jpg 750w,',
+        '/_nuxt/img/5f9177e-860.jpg 860w,',
+        '/_nuxt/img/b7fb524-970.jpg 970w,',
+        '/_nuxt/img/de5f3f2-1080.jpg 1080w',
         '">'
       ].join('')
     )
@@ -63,7 +63,7 @@ describe('Default options', () => {
   })
 })
 
-describe('Custom options, with Sharp', () => {
+describe('Custom options, with Jimp', () => {
   let nuxt
 
   beforeAll(async () => {
