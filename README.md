@@ -1,6 +1,7 @@
 # Nuxt Responsive Loader
 
 Warning: This my first ever NPM module.
+
 Credit: This repo is based on [@maniL](https://github.com/manniL)'s Nuxt SVG loader [repo](https://www.npmjs.com/package/nuxt-svg-loader).
 
 ## Features
@@ -8,7 +9,7 @@ Credit: This repo is based on [@maniL](https://github.com/manniL)'s Nuxt SVG loa
 - Generate responsive srcsets for your nuxt image assets
 - Your website will request the images that match the current screen size (optimised!)
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
-  – Fully configurable
+- Fully configurable
 
 ## Setup
 
@@ -43,10 +44,15 @@ This HTML will be the result:
 The plugin will work seamlessly out of the box with these default settings:
 
 name: 'img/[hash:7]-[width].[ext]'
+
 min: 640 – (minimum image width)
+
 max: 1080 – (maximum image width)
+
 steps: 5 – (five sizes per image will be generated)
+
 placeholder: false – (no placeholder will be generated)
+
 quality: 65 – (images are compressed with medium quality)
 
 If you want to configure the underlying loader, you can do that easily as well. For example, you might want to use [Sharp](https://github.com/lovell/sharp/) for faster build times. (All options available [here](https://github.com/herrstucki/responsive-loader))
