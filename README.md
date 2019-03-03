@@ -1,20 +1,21 @@
 # Nuxt Responsive Loader
 
-Notice: This is my first ever NPM module. Simple but true.
+[![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-responsive-loader/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
+[![npm](https://img.shields.io/npm/dt/nuxt-responsive-loader.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 
-Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader) repo.
+Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader).
 
 ## Features
 
 - Generate responsive srcsets for your Nuxt.js image assets
-- Your website will request the images that match the current screen size (optimised!)
+- Your website will request the images that match the current screen size
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
 - Fully configurable
 
 ## Setup
 
-- Add `nuxt-responsive-loader` as a dependency using yarn or npm to your project
-- Add `nuxt-responsive-loader` to `modules` section of `nuxt.config.js`
+- Add `nuxt-responsive-loader` as a dependency using yarn or npm
+- Add `nuxt-responsive-loader` to the `modules` section of `nuxt.config.js`
 
 ```js
 {
@@ -23,7 +24,7 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 ```
 
 - Add your images to the `assets` directory
-- Now you can use your generated srcsets in your templates like so:
+- Now you can use the generated srcsets in your templates like so:
 
 ```
 <template>
@@ -31,7 +32,7 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 </template>
 ```
 
-This HTML will be the result:
+This HTML will be the rendered:
 
 ```
 <img srcset="'/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
@@ -59,7 +60,7 @@ The plugin will work seamlessly out of the box with these default settings:
 
 ```
 
-If you want to configure the underlying loader, you can do that easily as well. For example, you might want to use [Sharp](https://github.com/lovell/sharp/) for faster build times. (All options available [here](https://github.com/herrstucki/responsive-loader))
+If you want to configure the underlying loader, you can do that easily as well. For example, you might want to use [Sharp](https://github.com/lovell/sharp/) for faster bulk processing. (All options available [here](https://github.com/herrstucki/responsive-loader))
 
 ```js
 // file: nuxt.config.js
