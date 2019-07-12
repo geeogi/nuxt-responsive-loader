@@ -60,7 +60,6 @@ The plugin will work seamlessly out of the box and will use these settings:
   steps: 5 // five sizes per image will be generated
   placeholder: false // no placeholder will be generated
   quality: 65 // images are compressed with medium quality
-  adapter: require('responsive-loader/sharp')
 }
 ```
 
