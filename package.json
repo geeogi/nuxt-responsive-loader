@@ -1,6 +1,6 @@
 {
   "name": "nuxt-responsive-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nuxt.js module for responsive loading",
   "license": "MIT",
   "contributors": [
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.21.3"
+    "jimp": "^0.6.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
@@ -57,7 +57,6 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.1.0",
     "jest": "^23.6.0",
-    "jimp": "^0.6.0",
     "klaw-sync": "^6.0.0",
     "nuxt-edge": "^2.5.0-25850891.8ea0f868",
     "prettier": "^1.16.4"
