@@ -68,7 +68,7 @@ export default {
 ```
 <img srcset="/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
 ```
-- Modern browsers will only request the image which matches the current screen size. This has the potential to reduce the bandwidth used by smaller devices and improve website performance. Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/).
+- Modern browsers will only request the image which matches the current screen size. This has the potential to reduce the bandwidth used by smaller devices and improve website performance. Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
 
 ### Compress source images to improve your website's performance:
 _The following examples require a custom configuration of the responsive loader module_
