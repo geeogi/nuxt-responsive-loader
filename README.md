@@ -12,14 +12,15 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 ## Features
 
 - Generate responsive srcsets for your Nuxt.js projects
-- Re-size images, compress, convert format, rename and generate placeholders
+- Compress images during the build step to improve website performance
+- Re-size images, convert format, rename and generate placeholders
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
-- Uses [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
+- Compatible with [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
 - Fully configurable
 
-## Setup
+## Example setup
 
-- Add `nuxt-responsive-loader` as a dependency using yarn or npm
+- Install using `npm install nuxt-responsive-loader` or `yarn add nuxt-responsive-loader`
 - Add `nuxt-responsive-loader` to the `modules` section of `nuxt.config.js`
 
 ```js
@@ -37,20 +38,33 @@ Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nu
 </template>
 ```
 
-This HTML will be the rendered:
+During the project's build step your image will be converted to upto 5 different images of varying size, each of which will be named with a unique hash and each of which will be compressed to reduce filesize (fully [configurable](#configuration)): 
+
+```
+├── _nuxt
+    ├── img
+        ├── 2b88a85-640.jpg
+        ├── 1fff45c-750.jpg
+        ├── 6717911-860.jpg
+        ├── f9f19bf-970.jpg
+        └── c0ceb80-1080.jpg
+```
+
+Your Nuxt template will produce the following `img` element in your built HTML file:
 
 ```
 <img srcset="/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
 ```
 
-- The browser will only request the image which matches the current screen size
-- Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
+Modern browsers will only request the image which matches the current screen size. This has the potential to reduce the bandwidth used by smaller devices and improve website performance. Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/).
 
-(Tip: if you're using the [nuxt-svg-loader](https://www.npmjs.com/package/nuxt-svg-loader) module, make sure to place it _before_ the nuxt-responsive-loader in the `modules` section of `nuxt.config.js`)
+See more examples [here](#examples).
+
+ > Tip: if you're also using the [nuxt-svg-loader](https://www.npmjs.com/package/nuxt-svg-loader) module, make sure to place it _before_ the nuxt-responsive-loader in the `modules` section of `nuxt.config.js`
 
 ## Configuration
 
-The plugin will work seamlessly out of the box and will use these settings:
+The plugin will work out of the box and will use these settings:
 
 ```js
 {
@@ -73,9 +87,9 @@ export default {
   // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/hello-world-[width].[ext]',
-    sizes: [200, 500],
+    sizes: [200, 500], 
     format: 'png',
-    adapter: require('responsive-loader/sharp'), // Recommended. Alternatively, leave adapter undefined and add JIMP to your project.
+    adapter: require('responsive-loader/sharp')
     placeholder: true
   }
 }
@@ -83,7 +97,7 @@ export default {
 
 ## Examples
 
-- Compressing images to reduce file size:
+- You can use this module to compress source images and reduce their file size during the build step to improve your website's performance:
 
 ```js
 // file: nuxt.config.js
@@ -93,8 +107,7 @@ export default {
   // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
-    adapter: require('responsive-loader/sharp'),
-    quality: 65
+    quality: 65 // choose a lower value if you want to reduce filesize further
   }
 }
 ```
@@ -106,7 +119,7 @@ export default {
 </template>
 ```
 
-- Generating placeholders for usage with blur-up technique:
+- You can use this module to generate placeholders for usage with the blur-up technique:
 
 ```js
 // file: nuxt.config.js
@@ -116,7 +129,6 @@ export default {
   // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
-    adapter: require('responsive-loader/sharp'),
     placeholder: true
   }
 }
@@ -129,7 +141,7 @@ export default {
 </template>
 ```
 
-- Converting image files to `.png`:
+- You can use this module to convert image files to `.png`:
 
 ```js
 // file: nuxt.config.js
@@ -139,8 +151,7 @@ export default {
   // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
-    format: 'png',
-    adapter: require('responsive-loader/sharp')
+    format: 'png'
   }
 }
 ```
@@ -150,6 +161,10 @@ export default {
 - Clone this repository
 - Install dependencies using `yarn install` or `npm install`
 - Start development server using `npm run dev`
+
+## Bugs
+
+- Please file an issue. Thanks. 
 
 ## License
 
