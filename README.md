@@ -7,8 +7,6 @@
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
-Credit: This repo is based on [@manniL](https://github.com/manniL)'s awesome [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader).
-
 ## Features
 
 - Generate responsive srcsets for your Nuxt.js projects
@@ -71,7 +69,7 @@ export default {
 - Modern browsers will only request the image which matches the current screen size. This has the potential to reduce the bandwidth used by smaller devices and improve website performance. Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
 
 ### Compress source images to improve your website's performance:
-_The following examples require a custom configuration of the responsive loader module_
+_The following examples each require a different custom configuration of the responsive loader module:_
 
 ```js
 // file: nuxt.config.js
@@ -175,6 +173,10 @@ export default {
 ## Bugs
 
 - Please file an issue. Thanks. 
+
+## Credit
+
+- This repo is based on [@manniL](https://github.com/manniL)' [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader). I learnt a lot from [@manniL](https://github.com/manniL)'s awesome Nuxt modules so do check them out. 
 
 ## License
 
