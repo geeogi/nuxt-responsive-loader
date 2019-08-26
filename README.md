@@ -1,11 +1,11 @@
 # Nuxt Responsive Loader
 
+## Process images in your Nuxt.js app 📸
+
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-responsive-loader/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 [![npm](https://img.shields.io/npm/dt/nuxt-responsive-loader.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 
 >
-
-[📖 **Release Notes**](./CHANGELOG.md)
 
 ## Features
 
@@ -181,3 +181,5 @@ export default {
 ## License
 
 MIT
+
+[📖 **Release Notes**](./CHANGELOG.md)
