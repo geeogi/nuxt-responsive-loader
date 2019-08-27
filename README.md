@@ -18,7 +18,7 @@ _Process images in your Nuxt.js app 📸_
 
 ## Demo
 
-- See the module in action in this [CodeSandbox](https://codesandbox.io/s/codesandbox-nuxt-vij34?fontsize=14).
+- See the module in action in this [CodeSandbox](https://codesandbox.io/s/codesandbox-nuxt-responsive-loader-vij34?fontsize=14).
 
 ## Setup
 
