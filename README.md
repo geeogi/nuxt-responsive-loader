@@ -16,6 +16,10 @@ _Process images in your Nuxt.js app 📸_
 - Compatible with [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
 - Fully configurable
 
+## Demo
+
+- See the module in action in this [CodeSandbox](https://codesandbox.io/s/codesandbox-nuxt-vij34?fontsize=14).
+
 ## Setup
 
 - Add the module to your project: 
