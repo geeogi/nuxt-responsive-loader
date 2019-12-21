@@ -9,9 +9,10 @@ _Process images during the build step in your Nuxt.js app 📸_
 
 ## Features
 
+- Compress images during the build step to reduce file size and improve website performance
 - Generate responsive srcsets for your Nuxt.js projects
-- Compress images during the build step to improve website performance
 - Re-size images, convert format, rename and generate placeholders
+- Enabled for JPG, PNG and WebP
 - Uses [responsive-loader](https://github.com/herrstucki/responsive-loader)
 - Compatible with [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
 - Fully configurable
@@ -175,7 +176,8 @@ export default {
 
 ## Tips
 
-- If you're also using the [nuxt-svg-loader](https://www.npmjs.com/package/nuxt-svg-loader) module, make sure to place it _before_ the nuxt-responsive-loader in the `modules` section of `nuxt.config.js`
+- This module is not be compatible with other Nuxt image modules.
+- This module will throw an error if the default image loader webpack rule for Nuxt has been edited in your project. To resolve this try removing other Nuxt image modules.
 
 ## Development
 

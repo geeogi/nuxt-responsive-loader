@@ -5,7 +5,6 @@ const { Nuxt, Builder, Generator } = require('nuxt-edge')
 jest.setTimeout(60 * 1000)
 
 const getRelativePath = fileObj => path.relative(__dirname, fileObj.path)
-
 const noJS = item => !/\.js/.test(item)
 
 describe('Default options', () => {
@@ -58,12 +57,18 @@ describe('Default options', () => {
     expect(html).toMatchSnapshot()
   })
 
+  test('SVG file is ignored by this module and rendered as normal', async () => {
+    const { html } = await nuxt.renderRoute('/pageWithSvg')
+    expect(html).toContain('<img src="/_nuxt/img/918a080.svg">')
+    expect(html).toMatchSnapshot()
+  })
+
   afterAll(async () => {
     await nuxt.close()
   })
 })
 
-describe('Custom options, with Jimp', () => {
+describe('Custom options', () => {
   let nuxt
 
   beforeAll(async () => {
@@ -88,6 +93,29 @@ describe('Custom options, with Jimp', () => {
     )
     expect(html).toMatchSnapshot()
     await nuxt.close()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+})
+
+describe('Error states', () => {
+  let nuxt
+  let error
+
+  test('throws error when the default image loader has been edited by another module', async () => {
+    try {
+      nuxt = new Nuxt(require('./fixture/configs/customWithEditedWebpack'))
+      await nuxt.ready()
+      const builder = new Builder(nuxt)
+      await builder.build()
+    } catch (e) {
+      error = e
+    }
+    expect(error).toMatchInlineSnapshot(
+      `[Error: Could not find the existing image loader rule. The webpack config has been edited, perhaps by another Nuxt module. To resolve this error try placing this module first in your Nuxt modules array or use a custom webpack configuration instead.]`
+    )
   })
 
   afterAll(async () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Custom options, with Jimp responsive srcset reflects custom options 1`] = `
+exports[`Custom options responsive srcset reflects custom options 1`] = `
 "<!doctype html>
 <html data-n-head-ssr data-n-head=\\"\\">
   <head data-n-head=\\"\\">
@@ -26,6 +26,19 @@ exports[`Default options HTML uses responsive srcset 1`] = `
 "
 `;
 
+exports[`Default options SVG file is ignored by this module and rendered as normal 1`] = `
+"<!doctype html>
+<html data-n-head-ssr data-n-head=\\"\\">
+  <head data-n-head=\\"\\">
+    <style data-vue-ssr-id=\\"17cfdfa9:0\\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;-webkit-transition:width .1s,opacity .4s;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{-webkit-transition:none;transition:none}.nuxt-progress-failed{background-color:red}</style>
+  </head>
+  <body data-n-head=\\"\\">
+    <div data-server-rendered=\\"true\\" id=\\"__nuxt\\"><!----><div id=\\"__layout\\"><img src=\\"/_nuxt/img/918a080.svg\\"></div></div><script>window.__NUXT__={layout:\\"default\\",data:[{}],error:null,serverRendered:true};</script><script src=\\"/_nuxt/runtime.js\\" defer></script><script src=\\"/_nuxt/pages/pageWithSvg.js\\" defer></script><script src=\\"/_nuxt/commons.app.js\\" defer></script><script src=\\"/_nuxt/app.js\\" defer></script>
+  </body>
+</html>
+"
+`;
+
 exports[`Default options build files contain srcset (.nuxt) 1`] = `
 Array [
   "../.nuxt/components",
@@ -38,6 +51,7 @@ Array [
   "../.nuxt/dist/client/img/1fff45c-750.jpg",
   "../.nuxt/dist/client/img/2b88a85-640.jpg",
   "../.nuxt/dist/client/img/6717911-860.jpg",
+  "../.nuxt/dist/client/img/918a080.svg",
   "../.nuxt/dist/client/img/c0ceb80-1080.jpg",
   "../.nuxt/dist/client/img/f9f19bf-970.jpg",
   "../.nuxt/dist/client/pages",
@@ -64,9 +78,12 @@ Array [
   "../dist/_nuxt/img/1fff45c-750.jpg",
   "../dist/_nuxt/img/2b88a85-640.jpg",
   "../dist/_nuxt/img/6717911-860.jpg",
+  "../dist/_nuxt/img/918a080.svg",
   "../dist/_nuxt/img/c0ceb80-1080.jpg",
   "../dist/_nuxt/img/f9f19bf-970.jpg",
   "../dist/_nuxt/pages",
   "../dist/index.html",
+  "../dist/pageWithSvg",
+  "../dist/pageWithSvg/index.html",
 ]
 `;

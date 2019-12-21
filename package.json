@@ -59,6 +59,7 @@
     "jest": "^23.6.0",
     "klaw-sync": "^6.0.0",
     "nuxt-edge": "^2.5.0-25850891.8ea0f868",
-    "prettier": "^1.16.4"
+    "nuxt-svg-loader": "^1.0.1",
+    "prettier": "^1.19.1"
   }
 }
