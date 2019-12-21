@@ -16,21 +16,18 @@ _Process images during the build step in your Nuxt.js app 📸_
 - Compatible with [Sharp](https://github.com/lovell/sharp/) for fast image processing ⚡
 - Fully configurable
 
-## Demo
-
-- See the module in action in this [CodeSandbox](https://codesandbox.io/s/codesandbox-nuxt-responsive-loader-vij34?fontsize=14).
-
 ## Setup
 
-- Add the module to your project: 
+- Add the module to your project:
 
 ```js
 npm install nuxt-responsive-loader
 // OR
 yarn add nuxt-responsive-loader
-```` 
+```
 
 - Add `nuxt-responsive-loader` to the `modules` section of `nuxt.config.js`:
+
 ```js
 // file: nuxt.config.js
 
@@ -43,6 +40,7 @@ export default {
 - Add your images to the `assets` directory
 
 ## Examples
+
 ### Generating srcsets (default)
 
 - Add srcsets to your `img` elements in your templates like so:
@@ -53,7 +51,7 @@ export default {
 </template>
 ```
 
-- During the project's build step your image will be converted into ~5 different images of varying size, each of which will be named with a unique hash and each of which will be compressed to reduce filesize (fully [configurable](#configuration)): 
+- During the project's build step your image will be converted into ~5 different images of varying size, each of which will be named with a unique hash and each of which will be compressed to reduce filesize (fully [configurable](#configuration)):
 
 ```
 ├── _nuxt
@@ -68,11 +66,21 @@ export default {
 - Your Nuxt template will produce the following `img` element in your built HTML file:
 
 ```html
-<img srcset="/_nuxt/img/2b88a85-640.jpg 640w, /_nuxt/img/1fff45c-750.jpg 750w, /_nuxt/img/6717911-860.jpg 860w, /_nuxt/img/f9f19bf-970.jpg 970w, /_nuxt/img/c0ceb80-1080.jpg 1080w">
+<img
+  srcset="
+    /_nuxt/img/2b88a85-640.jpg   640w,
+    /_nuxt/img/1fff45c-750.jpg   750w,
+    /_nuxt/img/6717911-860.jpg   860w,
+    /_nuxt/img/f9f19bf-970.jpg   970w,
+    /_nuxt/img/c0ceb80-1080.jpg 1080w
+  "
+/>
 ```
+
 - Modern browsers will only request the image which matches the current screen size. This has the potential to reduce the bandwidth used by smaller devices and improve website performance. Learn more by reading [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
 
 ### Compress source images to improve your website's performance:
+
 _The following examples each require a different custom configuration of the responsive loader module:_
 
 ```js
@@ -157,13 +165,14 @@ export default {
   // Specify your options as a responsiveLoader object
   responsiveLoader: {
     name: 'img/hello-world-[width].[ext]',
-    sizes: [200, 500], 
+    sizes: [200, 500],
     format: 'png',
     adapter: require('responsive-loader/sharp'),
     placeholder: true
   }
 }
 ```
+
 ## Tips
 
 - If you're also using the [nuxt-svg-loader](https://www.npmjs.com/package/nuxt-svg-loader) module, make sure to place it _before_ the nuxt-responsive-loader in the `modules` section of `nuxt.config.js`
@@ -176,11 +185,11 @@ export default {
 
 ## Bugs
 
-- Please file an issue. Thanks. 
+- Please file an issue. Thanks.
 
 ## Credit
 
-- This repo is based on [@manniL](https://github.com/manniL)' [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader). I learnt a lot from [@manniL](https://github.com/manniL)'s awesome Nuxt modules so do check them out. 
+- This repo is based on [@manniL](https://github.com/manniL)' [Nuxt SVG loader](https://www.npmjs.com/package/nuxt-svg-loader). I learnt a lot from [@manniL](https://github.com/manniL)'s awesome Nuxt modules so do check them out.
 
 ## License
 
