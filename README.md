@@ -176,8 +176,8 @@ export default {
 
 ## Tips
 
-- This module is not be compatible with other Nuxt image modules.
-- This module will throw an error if the default image loader webpack rule for Nuxt has been edited in your project. To resolve this try removing other Nuxt image modules.
+- This module is not compatible with other Nuxt image processing modules.
+- This module will throw an error if the default image loader webpack rule for Nuxt has been edited in your project. To resolve this try removing other Nuxt image processing modules.
 
 ## Development
 
