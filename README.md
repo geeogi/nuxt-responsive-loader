@@ -1,6 +1,6 @@
 # Nuxt Responsive Loader
 
-_Process images in your Nuxt.js app 📸_
+_Process images during the build step in your Nuxt.js app 📸_
 
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-responsive-loader/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
 [![npm](https://img.shields.io/npm/dt/nuxt-responsive-loader.svg?style=flat-square)](https://npmjs.com/package/nuxt-responsive-loader)
