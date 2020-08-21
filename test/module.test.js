@@ -122,3 +122,23 @@ describe('Error states', () => {
     await nuxt.close()
   })
 })
+
+describe('Svg compatibility', () => {
+  let nuxt
+
+  beforeAll(async () => {
+    nuxt = new Nuxt(require('./fixture/configs/svg'))
+    await nuxt.ready()
+    const builder = new Builder(nuxt)
+    await builder.build()
+    const generator = new Generator(nuxt)
+    await generator.generate({ build: false })
+    await nuxt.close()
+  })
+
+  test('works', () => {})
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+})

@@ -6,15 +6,7 @@ module.exports = {
   render: {
     resourceHints: false
   },
-  modules: [
-    function () {
-      this.extendBuild(config => {
-        const rule = config.module.rules.find(rule => rule.test.test('.png'))
-        rule.test = /\.jpg$/i
-      })
-    },
-    '@@'
-  ],
+  modules: ['nuxt-svg-loader', '@@'],
   build: {
     filenames: {
       app: '[name].js',
